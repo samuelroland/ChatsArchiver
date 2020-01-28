@@ -1,7 +1,7 @@
 <?php
 /**
  *  Projet: index de WspChatConverter
- *  Filename: ICT-133-SRD
+ *  Filename: ChatsArchiver
  *  Author: Samuel Roland
  *  Creation date: 20.12.2019
  */
@@ -15,9 +15,13 @@ if (isset($_GET['action'])) {
 }
 
 switch ($action) {
-    default:
+    case "login":
+        login($username, $password);
+        break;
         $title = "view chat";
         viewchat();
+    case "disconnect":
+        disconnect();
         break;
     case "home":
         $title = "Home";

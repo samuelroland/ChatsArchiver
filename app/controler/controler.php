@@ -1,10 +1,11 @@
 <?php
 /**
  *  Projet: controler de WspChatConverter
- *  Filename: ICT-133-SRD
+ *  Filename: ChatsArchiver
  *  Author: Samuel Roland
  *  Creation date: 20.12.2019
  */
+require_once 'model/model.php';  //importer fonction des données pour toutes les pages.
 
 function viewchat()
 {
@@ -55,11 +56,38 @@ function viewchat()
 
     }
 
-//Afficher les données:
-    require_once 'view/viewchat.php';
+function login($username, $password)
+{
+    if (isset($username, $password)) {   //si envoit les infos alors tente de connecter
+        $TheUser = getOneUser($username);
+        if ($TheUser != "") {
+            //si le mot de passe haché correspond au mot de passe donné:
+            if (password_verify($password, $TheUser['password'])) {   //si le mot de passe correspond à l'adresse email
+                $_SESSION['user'] = $username; //save session in $_SESSION
+                $_SESSION['name'] = $TheUser['firstname'] . " " . $TheUser['lastname']; //take the full name
+            }
+        }
+
+        if (isset($_SESSION['user']) == false) { //si pas connecté
+            $_SESSION['flashmessage'] = 1;  //message identifiants invalides
+            login("", "");  //login sans info = retour à la page de login.
+        } else {
+            viewchat(1); //view of the chat (without conversations)
+        }
+    } else {
+        viewchat(1);
+    }
+
 }
 
 function getFilesTypewithext($filename)
+function disconnect()
+{
+    unset($_SESSION['user']);
+    unset($_SESSION['name']);
+    login(null, null);
+}
+
 {
     $filesext = [
         $audiofiles = ["mp3, flac", "opus", "ogg", "m4a", "aiff"], //listes fichiers audios

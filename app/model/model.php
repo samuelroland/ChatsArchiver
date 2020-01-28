@@ -11,5 +11,20 @@ function getChatText()
     return $data;
 }
 
+function getUsers()
+{
+    return json_decode(file_get_contents("model/users/Users.json"), true);//recevoir la liste des utilisateurs
+}
+
+function getOneUser($username)
+{
+    $listUsers = getUsers();
+    foreach ($listUsers as $OneUser) {
+        if ($OneUser['username'] == $username) {
+            return $OneUser;
+        }
+    }
+    return "";  //si rien trouvé retourne vide.
+}
 
 ?>

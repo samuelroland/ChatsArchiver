@@ -178,6 +178,44 @@
             </div>
 
             <div class="_3HZor _3kF8H">
+                <div id="divFlashMessage"><?= flashmessage() ?></div>
+
+                <?php
+                if (isset($_SESSION['user']) == false) {
+                    ?>
+                    <div id="divLogin" class="">
+                        <form action="/?action=login" method="post">
+                            <strong>Connexion</strong><br>
+                            <label for="">Identifiant</label>
+                            <input type="text" id="username" class="form-control" name="username"
+                                   placeholder="john64" required><br>
+                            <label for="">Mot de passe</label>
+                            <input type="password" class="form-control" id="password" name="password" required><br>
+                            <p><a href="/?action=forgotpwd">Mot de passe oublié ? </a></p>
+
+                            <p>Pas encore inscrit ? <a href="/?action=createaccount">Créer un compte.</a></p>
+                            <input type="submit" value="Se connecter !">
+                        </form>
+                    </div>
+                    <?php
+                } else {
+                    ?>
+                    <div id="divLogin" class="">
+                        <strong>Connecté: <?= $_SESSION['user'] ?></strong><br>
+                        <a href="/?action=myprofil">Mon profil</a><br>
+                        <a href="/?action=disconnect">Déconnexion...</a>
+                    </div>
+                    <br><br><br>
+                    <div id="divSendAChat">
+                        <form action="/?action=sendchat" method="post" enctype="multipart/form-data">
+                            <p>Send a new Chat</p>
+                            <input type="file" name="<?= "fichier" ?>">
+                            <input type="submit" value="Envoyer ce chat">
+                        </form>
+                        <?= $chatlist ?>
+                    </div>
+                <?php } ?>
+
 
             </div>
             <div class="_3HZor _2rI9W">
