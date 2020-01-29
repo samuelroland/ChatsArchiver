@@ -1,7 +1,7 @@
 <?php
 /**
  *  Projet: Gabarit de WspChatConverter
- *  Filename: ICT-133-SRD
+ *  Filename: ChatsArchiver
  *  Author: Samuel Roland
  *  Creation date: 20.12.2019
  */
@@ -16,7 +16,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>WspChatConverter</title>
-
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap-grid.css">
     <link rel="stylesheet" href="WhatsApp_fichiers/cssm_qr.css">
     <style>
         #app, body, html {
@@ -167,7 +168,7 @@
      data-vendor1="/vendor1.15d83b58e8c21bb1df8c.js" data-vendor2="/vendor2.2f9bc4d78529b23e45d6.js"
      data-app-size="2144234" data-vendor1-size="822752" data-vendor2-size="523364"
      data-cssm-app="/cssm_app.bb72a14fdeec5f541bc0504e3eedfa81.css">
-<!-- contenu de l'application: -->
+    <!-- contenu de l'application: -->
     <div class="_1FPJ- _39gtr app-wrapper-web">
         <div tabindex="-1" class="app _3fUe9 two">
             <div class="_2sTOw"></div>
@@ -178,6 +179,7 @@
             </div>
 
             <div class="_3HZor _3kF8H">
+                <div id="divTitle"><strong><?= $title ?></strong></div>
                 <div id="divFlashMessage"><?= flashmessage() ?></div>
 
                 <?php
@@ -212,7 +214,7 @@
                             <input type="file" name="<?= "fichier" ?>">
                             <input type="submit" value="Envoyer ce chat">
                         </form>
-                        <?= $chatlist ?>
+                        <?= $listofchats ?>
                     </div>
                 <?php } ?>
 
@@ -237,14 +239,18 @@
                         </div>
                         <div class="_3V5x5" role="button">
                             <div class="_1lpto">
-                                <div class="_19vo_"><span dir="auto" title="Tziix" class="_19RFN _1ovWX _F7Vk">Tziix</span>
+                                <div class="_19vo_"><span dir="auto" title="Tziix"
+                                                          class="_19RFN _1ovWX _F7Vk">Tziix</span>
                                 </div>
                             </div>
                         </div>
                         <div class="_2kYeZ">
                             <div class="_3lq69">
                                 <div class="_3j8Pd">
-                                    <div role="button" title="Recherche..."><span data-icon="search-alt" class=""><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="#263238" fill-opacity=".5" d="M15.9 14.3H15l-.3-.3c1-1.1 1.6-2.7 1.6-4.3 0-3.7-3-6.7-6.7-6.7S3 6 3 9.7s3 6.7 6.7 6.7c1.6 0 3.2-.6 4.3-1.6l.3.3v.8l5.1 5.1 1.5-1.5-5-5.2zm-6.2 0c-2.6 0-4.6-2.1-4.6-4.6s2.1-4.6 4.6-4.6 4.6 2.1 4.6 4.6-2 4.6-4.6 4.6z"></path></svg></span>
+                                    <div role="button" title="Recherche..."><span data-icon="search-alt" class=""><svg
+                                                    id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                    width="24" height="24"><path fill="#263238" fill-opacity=".5"
+                                                                                 d="M15.9 14.3H15l-.3-.3c1-1.1 1.6-2.7 1.6-4.3 0-3.7-3-6.7-6.7-6.7S3 6 3 9.7s3 6.7 6.7 6.7c1.6 0 3.2-.6 4.3-1.6l.3.3v.8l5.1 5.1 1.5-1.5-5-5.2zm-6.2 0c-2.6 0-4.6-2.1-4.6-4.6s2.1-4.6 4.6-4.6 4.6 2.1 4.6 4.6-2 4.6-4.6 4.6z"></path></svg></span>
                                     </div>
                                     <span></span></div>
                             </div>
@@ -254,27 +260,11 @@
                     <div class="_3SYkD"><span></span></div>
                     <div class="_1_q7u">
                         <div class="_14Mgc copyable-area"><span></span><span></span>
-
                             <div class="_1_keJ">
                                 <div class="_3-kxx"></div>
                                 <div class="_1ays2">
                                     <!-- contenu de la discussion avec différents types de msgs-->
-                                    <?= $chatcontent ?>
-
-                                    <div class="FTBzM _4jEk2 message-in"><span></span>
-                                        <div class="_1zGQT _2ugFP tail"><span class="tail-container"></span><span
-                                                    class="tail-container highlight"></span>
-                                            <div class="_2Wx_5 _3LG3B">
-                                                <div class="-N6Gq">
-                                                    <div class="copyable-text" data-pre-plain-text="[21:38, 17.12.2019] Altin Zili: ">
-                                                        <div class="_12pGw" dir="ltr"><span dir="ltr" class="_F7Vk selectable-text invisible-space copyable-text"><span>Ok merci</span></span><span class="EopGb"></span></div></div><div class="_1RNhZ">
-                                                        <div class="_3MYI2"><span class="_3fnHB" dir="auto">21:38</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <span></span></div>
-                                    </div>
+                                    <?php echo $chatdisplay; ?>
                                 </div>
                             </div>
                         </div>
