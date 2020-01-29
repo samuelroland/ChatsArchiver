@@ -1,0 +1,20 @@
+[
+  {
+    "firstname": "John",
+    "lastname": "Perry",
+    "username": "john99",
+    "password": "$2y$10$CoO4tJ6D2EqVGJds\/N\/PV.dnthZhv9AyX6gsr3ymp1hSPGelvhisG"
+  },
+  {
+    "firstname": "Kate",
+    "lastname": "Pressii",
+    "username": "kateP",
+    "password": "$2y$10$CoO4tJ6D2EqVGJds\/N\/PV.dnthZhv9AyX6gsr3ymp1hSPGelvhisG"
+  },
+  {
+    "firstname": "Prill",
+    "lastname": "Fado",
+    "username": "PrillF",
+    "password": "$2y$10$CoO4tJ6D2EqVGJds\/N\/PV.dnthZhv9AyX6gsr3ymp1hSPGelvhisG"
+  }
+]
