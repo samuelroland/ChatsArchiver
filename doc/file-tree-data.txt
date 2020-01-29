@@ -1,0 +1,74 @@
+File tree data
+Details of the file tree for data of the server for ChatsArchiver
+
+
+Here is an exemple of the structure with 2 users (John => username = john99 and Kate => username = kateP) and each have severals chats importated.
+
+The chats have the name "chat-" + chatID.
+All the other files have the name uniqid() + extension.
+
+Every chat has a json called chat-2.json and a folder chat-2 on the side. Every chat is stored in the folder of the user.
+
+the 3 folders at the root of model are data (contains all the data of the chats: chat content, images, audio, videos, other files, ... and an image for the profil of the user), tempsfiles (contains all the tempory files: chat in .txt not yet converted.) and users that just contains the list of the users.
+
+
+/model
+	data
+		john99
+			profil
+				john99.jpg
+			chat-1.json
+			chat-1
+				5e31be870dc7f.jpg
+				5e31bebe33042.jpg
+				5e31becca46fd.jpg
+				
+			chat-2.json
+			chat-2
+				5e31be870dc7f.jpg
+				5e31bebe33042.jpg
+				5e31becca46fd.jpg
+				5e31bed25fe9c.jpg
+				5e31bed8a4efc.jpg
+				
+			chat-3.json
+			chat-3
+				5e31bedfb6847.jpg
+				5e31bef22d3f8.jpg
+				5e31bef876331.jpg
+				5e31befd9de5f.jpg
+				5e31bf03d5af4.jpg
+				
+			chat-5.json
+			chat-5
+				5e31befd9de5f.jpg
+				5e31bf03d5af4.jpg
+				
+				
+		kateP
+			profil
+				kateP.jpg
+			chat-2.json
+			chat-3
+				5e31berf76331.jpg
+				5e31befd9de5f.jpg
+				5e31ze03d5af4.jpg
+			chat-4.json
+			chat-3
+				5e31bedfb6847.jpg
+				5e31bef22d3f8.jpg
+				5e31bef876331.jpg
+				5e31befd9de5f.jpg
+				5e31bf03d5af4.jpg
+			chat-5.json
+			chat-7.json
+	
+	
+	tempsfiles
+		5e31berf76331.jpg
+
+	users
+		ListUsers.json
+	
+	
+/model.php	//the model contains all the functions for manage data (read and write).
