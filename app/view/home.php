@@ -1,8 +1,8 @@
 
 <?php
 /**
- *  Projet: xxx
- *  Filename: ICT-133-SRD
+ *  Projet: page home ??
+ *  Filename: ChatsArchiver
  *  Author: Samuel Roland
  *  Creation date: 20.12.2019
  */

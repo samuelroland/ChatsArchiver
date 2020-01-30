@@ -6,11 +6,17 @@
  *  Creation date: 20.12.2019
  */
 require_once 'model/model.php';  //importer fonction des données pour toutes les pages.
+require_once 'view/helpers/helpers.php';    //get the helpers functions
 
-function viewchat()
+function viewchat($chatid)
 {
-    require_once 'model/model.php';  //ajouter les données
-    $data = getChatText(); //le contenu brut du fichier texte.
+    if (isset($_SESSION['username'], $chatid)) {
+        $thechatinfos = getChatContent($chatid, $_SESSION['user']);
+        //Afficher les données:
+    }
+    require_once 'view/viewchat.php';   //display by default the view of chat, even if chat content or list of chats are not generated.
+}
+
 
     //Traiter les données:
     $lastposition = 0;
@@ -72,22 +78,28 @@ function login($username, $password)
             $_SESSION['flashmessage'] = 1;  //message identifiants invalides
             login("", "");  //login sans info = retour à la page de login.
         } else {
-            viewchat(1); //view of the chat (without conversations)
+            home(); //back to home
         }
     } else {
-        viewchat(1);
+        home();
     }
 
 }
 
-function getFilesTypewithext($filename)
 function disconnect()
 {
     unset($_SESSION['user']);
     unset($_SESSION['name']);
-    login(null, null);
+    home(); //back to home
 }
 
+function home()
+{
+    $title = "Home";
+    require_once 'view/gabarit.php';
+}
+
+function getFilesTypewithext($filename) //get the file type with the extension of the file extract of the filename
 {
     $filesext = [
         $audiofiles = ["mp3, flac", "opus", "ogg", "m4a", "aiff"], //listes fichiers audios
