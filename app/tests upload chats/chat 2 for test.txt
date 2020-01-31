@@ -1,0 +1,37 @@
+[29.11.19 17:39:45] ‎Vous avez créé le groupe “Projet discutions”
+[29.11.19 17:39:45] REBSON discutions: ‎Les messages envoyés dans ce groupe sont désormais protégés avec le chiffrement de bout en bout.
+[29.11.19 17:40:03] XtB12: Pour les discutions du projet Projet...
+[29.11.19 17:40:24] XtB12: Comme ça c’est séparé de la conversation privée.
+[29.11.19 17:49:36] Tziix: Ok
+‎[29.11.19 22:41:26] XtB12: ‎< pièce jointe : 00000005-PHOTO-2019-11-29-22-41-26.jpg >
+‎[30.11.19 20:18:00] XtB12: ‎< pièce jointe : 00000013-AUDIO-2019-11-30-20-17-59.wav >
+[30.11.19 21:21:32] XtB12: Je viens de t’envoyer le lien de la doc.
+[30.11.19 21:24:26] Tziix: XD
+‎[30.11.19 22:12:52] XtB12: ‎< pièce jointe : 00000016-AUDIO-2019-11-30-22-12-51.wav >
+‎[30.11.19 22:14:17] XtB12: ‎< pièce jointe : 00000017-AUDIO-2019-11-30-22-14-17.wav >
+[01.12.19 09:37:48] XtB12: On compte les heures de travail chacun pour soi ?
+[01.12.19 12:24:23] XtB12: Moi je bosse pas dessus aujourd’hui et tout est commit push.  
+Donc toutes les taches sont les issues dans le sprint 1. Donc il y a plutôt de la doc mais tu peux aussi faire un peu de code. J’ai mis les labels dev = développement. Et administration pour tout ce qui est organisation administration du projet. 
+Quand tu prends une tache et tu la mets dans in progress tu te l’assigne aussi comme ça on fait pas la même.
+[01.12.19 12:44:39] Tziix: Ok
+‎[01.12.19 13:18:40] XtB12: ‎< pièce jointe : 00000025-PHOTO-2019-12-01-13-18-40.jpg >
+[01.12.19 17:16:48] Tziix: Bah pour la bataille navale
+[01.12.19 17:30:39] Tziix: Moi la je vais faire le truc qui compte de nombre de joueur
+[01.12.19 17:30:50] Tziix: Pour aller avec la grille
+[01.12.19 17:41:00] XtB12: ok alors je modifie le total et je te dis quand jai fini.
+[01.12.19 17:41:46] Tziix: Ok
+[01.12.19 17:47:13] Tziix: Pour les nom écrit dans le dossier je leur met une structure de base...
+[01.12.19 17:48:57] Tziix: Du style: 34;1;pseudomax35caractere
+(longueur ligne;id;pseudo)?
+[01.12.19 17:51:44] Tziix: enfaite non ce sera plutot celle là
+[01.12.19 17:51:45] Tziix: structure = !id;pseudo/
+[01.12.19 18:12:47] Tziix: il faut pas mettre de = dans les define
+[01.12.19 18:13:01] XtB12: oui mais pas que...
+[01.12.19 18:13:35] Tziix: cest une constante
+[01.12.19 18:13:50] XtB12: ben juste sur l'appel et pas l'initialisation de la constante.
+[01.12.19 18:14:05] Tziix: ah ok
+[01.12.19 18:14:13] XtB12: aussi le ;
+[01.12.19 18:26:23] XtB12: ... pour total.
+[01.12.19 18:26:34] Tziix: ok
+[19.12.19 19:05:52] XtB12: Si tu as du temps commence quelques issues sur github...
+[19.12.19 19:43:51] Tziix: Ok
