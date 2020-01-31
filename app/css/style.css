@@ -1,0 +1,8 @@
+.banchatleft{
+    border-top: 2px solid green;
+    border-bottom: 2px solid green;
+}
+
+.banchatleft :hover{
+    background-color: #1aff56;
+}
