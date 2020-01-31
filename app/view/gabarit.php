@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap-grid.css">
     <link rel="stylesheet" href="WhatsApp_fichiers/cssm_qr.css">
+    <link rel="stylesheet" href="/css/style.css">
     <style>
         #app, body, html {
             height: 100%;
@@ -264,7 +265,7 @@
                                 <div class="_3-kxx"></div>
                                 <div class="_1ays2">
                                     <!-- contenu de la discussion avec différents types de msgs-->
-                                    <?php echo $chatdisplay; ?>
+                                    <?= $chatdisplay ?>
                                 </div>
                             </div>
                         </div>
