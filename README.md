@@ -5,4 +5,7 @@ _**DISCLAIMER**: the app is not done yet, and should not be used. The author dec
 
 **State of the app: it was an idea of a weekend, and it's currently not completed at all... maybe I'll continue it one day if I have the time.**
 
+The current design:
+![interface image](interface.png)
+
 ### Feel free to create issue if you have any comments or questions...
